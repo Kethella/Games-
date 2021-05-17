@@ -1,0 +1,40 @@
+def main():
+    fizzbuzz = 0
+    fizz = 0
+    buzz = 0
+
+    #Ask user for number INT
+    user_input = int(input("Number to count to: "))
+
+    #the program should count UNTIL the INT
+    for i in range(user_input):
+        count_numbers = i + 1
+        #if number / by 5 and 3 print FIZZBUZZ
+        if (count_numbers % 3 == 0) and (count_numbers % 5 == 0):
+            print("Fizzbuzz")
+            fizzbuzz = (count_numbers - i) + fizzbuzz
+            
+        #if INT / 3 print FIZZ instead number
+        elif (count_numbers % 3 == 0):
+            print("Fizz")
+            fizz = (count_numbers - i) + fizz
+
+        #if / 5 print BUZZ instead number
+        elif (count_numbers % 5 == 0):
+            print("Buzz")
+            buzz = (count_numbers - i) + buzz
+            
+        else:
+            print(count_numbers)
+    
+    print()
+
+    #print how many times fizzed
+    Number_fizzed = fizz 
+    print("Num fizzed: " + str(Number_fizzed))
+    #print how many times buzzed
+    Number_buzzed = buzz
+    print("Num buzzed: " + str(Number_buzzed))
+    #print how many times fizzbuzzed
+    Number_fizzbuzzed = fizzbuzz
+    print("Num fizzbuzzed: " + str(Number_fizzbuzzed))  
